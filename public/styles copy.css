@@ -5,13 +5,13 @@ body{
   margin: 20px 40px;
   font-size: 1.2rem;
   letter-spacing: 1px;
-  background: #1a1a1a;
+  background: #fafafa;
 }
 h1, h2, h3, h4, ul, li, a, p, input, label, button, div, footer{
   margin: 0;
   padding: 0;
   font-family: 'Quicksand', sans-serif;
-  color: #eeeeec;
+  color: #444;
 }
 ul{
   list-style-type: none;
@@ -25,15 +25,6 @@ nav{
   align-items: flex-end;
   margin-bottom: 120px;
 }
-
-.right-menu{
-  display: flex;
-}
-
-.right-menu h1{
-  padding-left: 3vw;
-}
-
 nav ul{
   display: flex;
   align-items: center;
@@ -41,7 +32,6 @@ nav ul{
 nav li{
   margin-left: 20px;
 }
-
 nav li a{
   text-transform: uppercase;
   font-weight: 700;
@@ -53,7 +43,6 @@ nav li a{
 .btn{
   border-radius: 36px;
   background: #FEE996;
-  color: #1a1a1a;
 }
 form h2{
   font-size: 2.4em;
@@ -66,7 +55,7 @@ form{
   padding: 30px;
   box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
   border-radius: 10px;
-  background: #444;
+  background: white;
 }
 input{
   padding: 10px 12px;
@@ -74,7 +63,6 @@ input{
   border: 1px solid #ddd;
   font-size: 1em;
   width: 100%;
-  color: #1a1a1a;
 }
 label{
   display: block;
@@ -91,14 +79,7 @@ button{
   display: block;
   padding: 10px 16px;
   letter-spacing: 2px;
-  color: #1a1a1a;
 }
-
-button:hover{
-  cursor: pointer;
-  background-color: #ffffee;
-}
-
 .error{
   color: #ff0099;
   margin: 10px 2px;
@@ -121,7 +102,7 @@ header h3{
   font-size: 1.6em;
   margin-bottom: 10px;
   margin-left: 2px;
-  color: #aaa;
+  color: #999;
 }
 header .btn{
   margin-top: 20px;
@@ -142,16 +123,11 @@ header .btn{
 .recipe{
   display: inline-block;
   border-radius: 20px;
-  background: #ccc;
+  background: white;
   position: relative;
   text-align: center;
-  padding: 0 20px 30px 20px;
+  padding: 0 20px 30px 20px
 }
-
-.recipe h4,p{
-  color: #1a1a1a;
-}
-
 .recipe img{
   width: 100px;
   margin: -30px auto 20px;
