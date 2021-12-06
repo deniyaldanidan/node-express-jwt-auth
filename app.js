@@ -2,8 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser')
 
+const {requireAuth, checkUser} = require("./middleware/authMiddleware")
+
 require('dotenv').config()
 const app = express();
+
 
 // middleware
 app.use(express.static('public'));
@@ -18,17 +21,13 @@ app.set('view engine', 'ejs');
 const connectDB = require('./config/DBConnect')
 connectDB()
 
+// apply checkUser middleware to every get-req
+app.get("*", checkUser)
+
 // routes
 app.get('/', (req, res) => res.render('home'));
-app.get('/smoothies', (req, res) => res.render('smoothies'));
+app.get('/smoothies', requireAuth, (req, res) => res.render('smoothies'));
 
-// cookies
-app.get("/set-cookies", (req, res)=>{
-  // res.setHeader('Set-Cookie', 'newUser=true')
-  res.cookie('newUser', false)
-  res.cookie('isEmployee', true)
-  res.send("Cookies are set")
-})
 
 // auth-routes
 app.use(require('./routes/authRoutes'))

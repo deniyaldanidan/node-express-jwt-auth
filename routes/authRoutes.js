@@ -4,7 +4,8 @@ const {
     signup_get,
     signup_post,
     login_get,
-    login_post
+    login_post,
+    logout_get
 } = require('../controllers/authController')
 
 router.route('/signup')
@@ -15,6 +16,6 @@ router.route('/login')
     .get(login_get)
     .post(login_post)
 
-router.get('/logout')
+router.get('/logout', logout_get)
 
 module.exports = router;

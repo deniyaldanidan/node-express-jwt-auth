@@ -30,5 +30,8 @@ UserSchema.pre('save', async function(next){
     next()
 })
 
+// Custom function
+// UserSchema.statics.login
+
 const User = mongoose.model('user', UserSchema) //collection name will be users
 module.exports = User;
